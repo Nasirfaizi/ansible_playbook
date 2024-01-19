@@ -1,0 +1,19 @@
+---
+- name: hello word
+  hosts: localhost
+
+  tasks:
+    - include_vars: vars.yml
+    - name: display hello world
+      shell: echo "hello world"
+
+    - name: display date
+      command: date
+    - name: add line to test file
+      lineinfile:
+        path: test.txt
+        line: 'server {{ server_name }}'
+
+    - name: install package
+      command: echo {{ package_name}}
+
