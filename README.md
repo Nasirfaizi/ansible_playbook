@@ -1,1 +1,2 @@
+.gitignore
 # ansible_playbook
